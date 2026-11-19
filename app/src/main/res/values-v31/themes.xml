@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- SPDX-License-Identifier: GPL-3.0-or-later -->
+<!-- Android 12+ launch splash: night canopy behind the adaptive icon (it uses the launcher icon's
+     own layers, so the frog must sit inside the 66 dp safe circle; tools/make_brand.py does that). -->
+<resources>
+    <style name="Theme.Boophis" parent="android:Theme.Material.NoActionBar">
+        <item name="android:windowBackground">@color/boophis_bg</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:navigationBarColor">@android:color/transparent</item>
+        <item name="android:windowSplashScreenBackground">@color/boophis_bg</item>
+    </style>
+</resources>

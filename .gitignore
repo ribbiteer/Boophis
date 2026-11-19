@@ -1,0 +1,36 @@
+# Build
+.gradle/
+build/
+.kotlin/
+*.iml
+.idea/
+local.properties
+captures/
+.externalNativeBuild/
+.cxx/
+
+# Never commit signing material
+*.jks
+*.keystore
+keystore.properties
+
+# Reference checkout (Fermata) and scratch
+ref/
+tmp/
+dist/
+
+# Fixture media: keep layout + small sidecars, never the video files
+fixtures/media/**/*.mkv
+fixtures/media/**/*.mp4
+fixtures/media/**/*.m4v
+fixtures/media/**/*.avi
+fixtures/media/**/*.webm
+assets/work/
+
+# Google's proprietary Android Auto SDK (legacy projection API) — fetched locally, never committed
+car-projection/libs/*.aar
+
+# Private: dev logs, real-library screenshots, local agent setup and machine notes (never published)
+private/
+.claude/
+CLAUDE.local.md

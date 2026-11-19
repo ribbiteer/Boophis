@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- SPDX-License-Identifier: GPL-3.0-or-later -->
+<!-- Only Boophis's own APK copy, shared with the stock Package Installer for the car-ready reinstall. -->
+<paths>
+    <cache-path name="selfinstall" path="selfinstall/" />
+</paths>

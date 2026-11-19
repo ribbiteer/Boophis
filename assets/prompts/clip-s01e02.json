@@ -1,0 +1,13 @@
+{
+ "model": "ltx25",
+ "params": {
+  "prompt": "A train emerges slowly out of the mist on a salt marsh, its headlight glowing, steam and mist drifting past, reeds swaying. The camera stays nearly still with a slow gentle drift. The camera moves very slowly and smoothly. The scene stays bright and well lit, with natural colors matching the first frame. No text, no people in close-up, nothing morphs, shapes stay stable and solid.",
+  "aspect": "16:9",
+  "seconds": 5,
+  "size": "720p",
+  "start": "<upload of Saltmarsh Station S01E02 - Late Arrival-thumb.jpg>",
+  "sound": false,
+  "smooth": true,
+  "motion": 14
+ }
+}

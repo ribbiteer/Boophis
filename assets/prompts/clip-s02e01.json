@@ -1,0 +1,13 @@
+{
+ "model": "ltx25",
+ "params": {
+  "prompt": "A frozen salt marsh with a train stuck in snow, lanterns glowing warmly, light snowflakes falling gently, breath of mist drifting, snow shimmering. The camera slowly pushes in. The camera moves very slowly and smoothly. The scene stays bright and well lit, with natural colors matching the first frame. No text, no people in close-up, nothing morphs, shapes stay stable and solid.",
+  "aspect": "16:9",
+  "seconds": 5,
+  "size": "720p",
+  "start": "<upload of Saltmarsh Station S02E01 - Frozen Line-thumb.jpg>",
+  "sound": false,
+  "smooth": true,
+  "motion": 14
+ }
+}

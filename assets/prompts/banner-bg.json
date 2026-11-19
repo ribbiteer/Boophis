@@ -1,0 +1,9 @@
+{
+ "model": "moss-image",
+ "params": {
+  "prompt": "{\"type\": \"wide panoramic banner background, fictional\", \"style\": \"stylized painterly illustration, atmospheric, soft, original artwork\", \"scene\": \"a night rainforest canopy, layered deep green-black leaves and fronds, soft mint and teal bioluminescent glow, out-of-focus bokeh orbs, a few small warm coral highlights, calm misty atmosphere, no animals\", \"palette\": [\"deep green-black\", \"mint #2FBFA0\", \"teal\", \"small coral accents\"], \"layout\": \"very wide panoramic composition; the left 40 percent is darker, quieter and emptier with little detail; richer glow and bokeh toward the right; no text, no logos, no animals, no people\"}",
+  "aspect": "16:9",
+  "seed": 3201,
+  "megapixels": 4.0
+ }
+}

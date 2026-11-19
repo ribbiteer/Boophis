@@ -1,0 +1,13 @@
+{
+ "model": "ltx25",
+ "params": {
+  "prompt": "The interior of an old locomotive engine shed at dusk with a quiet green steam engine, polished brass and iron. The warm oil lamps flicker softly, reflections glint on the brass, thin haze and faint steam drift slowly through shafts of dusk light from the high windows. The camera performs a slow gentle push-in toward the engine. The camera moves very slowly and smoothly. The scene stays bright and well lit, with natural colors matching the first frame. No text, no people in close-up, nothing morphs, shapes stay stable and solid.",
+  "aspect": "16:9",
+  "seconds": 5,
+  "size": "720p",
+  "start": "<upload of source-still.png>",
+  "sound": false,
+  "smooth": true,
+  "motion": 14
+ }
+}

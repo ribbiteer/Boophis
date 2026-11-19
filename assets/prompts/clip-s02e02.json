@@ -1,0 +1,13 @@
+{
+ "model": "ltx25",
+ "params": {
+  "prompt": "A signal tower on a railway line in gentle rain, raindrops fall steadily and ripple in puddles, the signal lamp glows and flickers, wet surfaces glisten. The camera drifts slowly to the left. The camera moves very slowly and smoothly. The scene stays bright and well lit, with natural colors matching the first frame. No text, no people in close-up, nothing morphs, shapes stay stable and solid.",
+  "aspect": "16:9",
+  "seconds": 5,
+  "size": "720p",
+  "start": "<upload of Saltmarsh Station S02E02 - Signal in the Rain-thumb.jpg>",
+  "sound": false,
+  "smooth": true,
+  "motion": 14
+ }
+}

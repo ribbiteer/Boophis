@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Debug-only: adb hooks for renderer config and snapshots. -->
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+    <application>
+        <!-- Car-mode layout preview at car dp sizes, for when the DHU isn't available. -->
+        <activity
+            android:name="app.boophis.debug.CarPreviewActivity"
+            android:exported="true"
+            android:screenOrientation="sensorLandscape"
+            android:theme="@android:style/Theme.Material.NoActionBar.Fullscreen" />
+        <!-- Screenshot build (.shots) only: show over the lock screen; see ShotsInit. -->
+        <provider
+            android:name="app.boophis.debug.ShotsInit"
+            android:authorities="${applicationId}.shotsinit"
+            android:exported="false" />
+        <receiver android:name="app.boophis.debug.DebugReceiver" android:exported="true">
+            <intent-filter>
+                <action android:name="app.boophis.DEBUG_SNAPSHOT" />
+                <action android:name="app.boophis.DEBUG_CAR_CONFIG" />
+                <action android:name="app.boophis.DEBUG_PLAY" />
+                <action android:name="app.boophis.DEBUG_NAV" />
+                <action android:name="app.boophis.DEBUG_THEME" />
+            </intent-filter>
+        </receiver>
+    </application>
+</manifest>

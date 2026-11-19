@@ -1,0 +1,100 @@
+name: ci
+
+# Runs for every branch and pull request. Actions are pinned to commits.
+on:
+  push:
+    branches: ["**"]
+  pull_request:
+  workflow_call:
+
+permissions:
+  contents: read
+
+jobs:
+  identity:
+    name: identity scan and sign-off
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+
+      - uses: actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0 # v7.1.0
+        with:
+          python-version: "3.12"
+
+      # The private denylist comes from the IDENTITY_DENYLIST repository secret,
+      # so the list is never public. When the secret is set, the scan requires
+      # it. When this repository has no secret yet, the scan runs the generic
+      # rules and leaves a warning on the run, so the gap stays visible. A fork,
+      # and a pull request from one, cannot read the secret and uses the
+      # generic rules without a warning.
+      - name: Load private denylist
+        env:
+          IDENTITY_DENYLIST: ${{ secrets.IDENTITY_DENYLIST }}
+          HAS_SECRETS: ${{ !github.event.repository.fork && (github.event_name != 'pull_request' || github.event.pull_request.head.repo.full_name == github.repository) && github.actor != 'dependabot[bot]' }}
+        run: |
+          if [ -n "$IDENTITY_DENYLIST" ]; then
+            printf '%s\n' "$IDENTITY_DENYLIST" > "$RUNNER_TEMP/denylist.txt"
+            echo "BOOPHIS_DENYLIST=$RUNNER_TEMP/denylist.txt" >> "$GITHUB_ENV"
+            echo "SCAN_FLAGS=--require-denylist" >> "$GITHUB_ENV"
+          elif [ "$HAS_SECRETS" = "true" ]; then
+            echo "::warning::IDENTITY_DENYLIST secret is not set; the identity scan used the generic rules only."
+          fi
+
+      - name: Scan tracked files
+        run: python scripts/identity_scan.py $SCAN_FLAGS --all
+
+      # A branch or tag pushed for the first time has no commit before it:
+      # then every commit that is not on the default branch yet is checked.
+      - name: Check commit authors, sign-offs and messages
+        env:
+          BASE: ${{ github.event.pull_request.base.sha || github.event.before }}
+          HEAD: ${{ github.event.pull_request.head.sha || github.sha }}
+          DEFAULT_BRANCH: ${{ github.event.repository.default_branch }}
+        run: |
+          if [ -n "$BASE" ] && [ "$BASE" != "0000000000000000000000000000000000000000" ] \
+             && git cat-file -e "$BASE" 2>/dev/null; then
+            set -- "$BASE..$HEAD"
+          elif git rev-parse -q --verify "refs/remotes/origin/$DEFAULT_BRANCH" >/dev/null; then
+            set -- "$HEAD" --not "refs/remotes/origin/$DEFAULT_BRANCH"
+          else
+            set -- "$HEAD"
+          fi
+          status=0
+          for c in $(git rev-list --no-merges "$@"); do
+            for email in $(git show -s --format='%ae %ce' "$c"); do
+              case "$email" in
+                *@users.noreply.github.com|noreply@github.com) ;;
+                *) echo "::error::commit $c uses a non-noreply email"; status=1 ;;
+              esac
+            done
+            msg="$RUNNER_TEMP/msg-$c"
+            git show -s --format=%B "$c" > "$msg"
+            # The whole message: in a finished commit a line starting with # is text.
+            python scripts/identity_scan.py $SCAN_FLAGS --commit-msg "$msg" --full-message || status=1
+          done
+          exit $status
+
+  build:
+    name: unit tests and build
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+
+      - uses: actions/setup-java@d1374f8ac74474200d16ef8ecee22c7ae7a51880 # v6.3.0
+        with:
+          distribution: temurin
+          java-version: "21"
+
+      - uses: android-actions/setup-android@be39fa834029ff78f1a44aa3bb0819b8fc2bd8fd # v4.0.4
+
+      - uses: gradle/actions/setup-gradle@8da46b539cd8fe6ab27ca75128919a18d757604c # v6.4.1
+
+      # CI never downloads Google's proprietary Android Auto SDK, so car-projection is skipped
+      # (it is only included when its .aar is present) and the app builds without a car entry.
+      - name: Unit tests and build
+        run: ./gradlew --no-daemon :core-model:test :core-library:testDebugUnitTest :ui:testDebugUnitTest assembleDebug

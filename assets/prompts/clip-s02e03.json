@@ -1,0 +1,13 @@
+{
+ "model": "ltx25",
+ "params": {
+  "prompt": "A quiet railway waiting room, warm lamplight flickers softly, dust motes float in the light, a gentle shadow shifts across the wall. The camera drifts very slowly sideways. The camera moves very slowly and smoothly. The scene stays bright and well lit, with natural colors matching the first frame. No text, no people in close-up, nothing morphs, shapes stay stable and solid.",
+  "aspect": "16:9",
+  "seconds": 5,
+  "size": "720p",
+  "start": "<upload of Saltmarsh Station S02E03 - The Waiting Room-thumb.jpg>",
+  "sound": false,
+  "smooth": true,
+  "motion": 14
+ }
+}

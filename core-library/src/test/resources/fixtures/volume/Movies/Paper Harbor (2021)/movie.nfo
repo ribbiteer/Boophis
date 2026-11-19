@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<movie>
+  <title>Paper Harbor</title>
+  <originaltitle>Paper Harbor</originaltitle>
+  <sorttitle>Paper Harbor</sorttitle>
+  <year>2021</year>
+  <plot>A cartographer returns to the port town she mapped as a child.</plot>
+  <mpaa>PG-13</mpaa>
+  <runtime>104</runtime>
+  <ratings><rating name="tmdb" max="10" default="true"><value>7.4</value><votes>1200</votes></rating></ratings>
+  <genre>Drama</genre>
+  <genre>Mystery</genre>
+  <fileinfo><streamdetails>
+    <video><codec>h264</codec><durationinseconds>6240</durationinseconds></video>
+    <audio><codec>eac3</codec><language>eng</language></audio>
+    <subtitle><language>eng</language></subtitle>
+  </streamdetails></fileinfo>
+</movie>

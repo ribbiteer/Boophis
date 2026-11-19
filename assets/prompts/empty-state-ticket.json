@@ -1,0 +1,9 @@
+{
+ "model": "qwen-image-21-full",
+ "params": {
+  "prompt": "Photorealistic product render, soft studio light with a slight sheen, clean and crisp edges, strong readable silhouette, slightly stylised so it works as an icon. A single cinema admission ticket, slightly rotated, cream paper with a soft matte sheen, rounded notches on both short sides, a bold coral #FF5B3A stripe across the middle, a perforated tear line near one end, and abstract blank lines instead of any writing. Single object only, whole object visible with a wide margin, fully transparent background, no ground, no plate, no shadow, no reflection, no text, no logos.",
+  "aspect": "3:2",
+  "seed": 4102,
+  "transparent": true
+ }
+}

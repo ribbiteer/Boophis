@@ -1,0 +1,5 @@
+/sdcard/Movies/Paper Harbor (2021)
+/sdcard/Movies/Midnight Orchard (2018)
+/sdcard/Movies/The Quiet Engine (2023)
+/sdcard/Shows
+/sdcard/BoophisSpike

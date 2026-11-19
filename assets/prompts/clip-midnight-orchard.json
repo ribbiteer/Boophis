@@ -1,0 +1,13 @@
+{
+ "model": "ltx25",
+ "params": {
+  "prompt": "A moonlit orchard at night with glowing fruit hanging on twisted trees and a winding path under a starry sky. The amber lantern glow flickers softly, leaves stir gently in a light breeze, the stars shimmer, a faint silver mist drifts low over the ground. The camera pushes in slowly along the path. The image stays bright and luminous. The camera moves very slowly and smoothly. The scene stays bright and well lit, with natural colors matching the first frame. No text, no people in close-up, nothing morphs, shapes stay stable and solid.",
+  "aspect": "16:9",
+  "seconds": 5,
+  "size": "720p",
+  "start": "<upload of backdrop.jpg>",
+  "sound": false,
+  "smooth": true,
+  "motion": 14
+ }
+}

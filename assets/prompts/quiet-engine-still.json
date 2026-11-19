@@ -1,0 +1,9 @@
+{
+ "model": "moss-image",
+ "params": {
+  "prompt": "{\"type\": \"cinematic still, fictional\", \"style\": \"stylized painterly illustration, atmospheric, cinematic, original artwork, same family as flat painterly fixture backdrops\", \"scene\": \"the interior of an old locomotive engine shed at dusk, a quiet dormant steam engine with polished brass fittings, gauges and iron wheels, warm oil-lamp light glowing on brass and iron, soft haze and light shafts from high dusty windows, no people\", \"palette\": [\"warm amber lamplight\", \"brass gold\", \"slate blue dusk\", \"soft teal shadows\"], \"lighting\": \"dim but well exposed, bright warm midtones, lifted shadows, no pure black areas\", \"layout\": \"wide 16:9 composition, no text, no logos, no real people, no faces\"}",
+  "aspect": "16:9",
+  "seed": 3101,
+  "megapixels": 2.5
+ }
+}

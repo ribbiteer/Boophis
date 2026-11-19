@@ -1,0 +1,9 @@
+{
+ "model": "qwen-image-21-full",
+ "params": {
+  "prompt": "Photorealistic product render, soft studio light with a slight sheen, clean and crisp edges, strong readable silhouette, slightly stylised so it works as an icon. A vintage 35mm film reel seen almost straight on, tilted a few degrees: dark graphite brushed-metal flanges with six large round cut-out holes, a mint-teal #2FBFA0 anodised accent ring around the centre hub, a few turns of dark film strip visible at the rim. Single object only, whole object visible with a wide margin, fully transparent background, no ground, no plate, no shadow, no reflection, no text, no logos.",
+  "aspect": "1:1",
+  "seed": 4101,
+  "transparent": true
+ }
+}

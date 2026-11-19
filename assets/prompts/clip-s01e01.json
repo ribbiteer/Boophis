@@ -1,0 +1,13 @@
+{
+ "model": "ltx25",
+ "params": {
+  "prompt": "A stationmaster's lantern glows on a foggy railway platform at dawn. The lantern flame flickers softly, fog drifts slowly across the platform and reeds sway lightly. The camera drifts slowly forward. The camera moves very slowly and smoothly. The scene stays bright and well lit, with natural colors matching the first frame. No text, no people in close-up, nothing morphs, shapes stay stable and solid.",
+  "aspect": "16:9",
+  "seconds": 5,
+  "size": "720p",
+  "start": "<upload of Saltmarsh Station S01E01 - The Lantern Keeper-thumb.jpg>",
+  "sound": false,
+  "smooth": true,
+  "motion": 14
+ }
+}

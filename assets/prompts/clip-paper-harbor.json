@@ -1,0 +1,13 @@
+{
+ "model": "ltx25",
+ "params": {
+  "prompt": "A cinematic painterly harbor at sunset made of layered folded paper: small paper sailboats bob gently on paper waves, their sails swaying softly in a light breeze, warm orange lantern lights twinkle along the quay, the sky glows with dusk orange and teal. The camera drifts slowly to the right with a gentle parallax. The camera moves very slowly and smoothly. The scene stays bright and well lit, with natural colors matching the first frame. No text, no people in close-up, nothing morphs, shapes stay stable and solid.",
+  "aspect": "16:9",
+  "seconds": 5,
+  "size": "720p",
+  "start": "<upload of fanart.jpg>",
+  "sound": false,
+  "smooth": true,
+  "motion": 14
+ }
+}

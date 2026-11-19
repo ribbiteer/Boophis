@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<movie>
+  <title>Midnight Orchard</title>
+  <originaltitle>Midnight Orchard</originaltitle>
+  <year>2018</year>
+  <plot>Every night at midnight the apples in an old orchard begin to glow. A young night-watchman follows the lantern path to learn who has been tending the trees for a hundred years.</plot>
+  <tagline>Some harvests only happen in the dark.</tagline>
+  <runtime>1</runtime>
+  <mpaa>PG-13</mpaa>
+  <rating>6.8</rating>
+  <genre>Mystery</genre>
+  <genre>Fantasy</genre>
+  <studio>Quarter Moon Films</studio>
+  <premiered>2018-10-26</premiered>
+</movie>

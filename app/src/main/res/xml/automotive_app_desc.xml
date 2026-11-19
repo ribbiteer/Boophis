@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- The projection declarations Fermata uses (overrides car/'s template one). No "media" use: there is no browse
+     service, so Android Auto lists one entry (the projection app), and its media card and
+     steering keys follow Boophis's MediaSession anyway. -->
+<automotiveApp xmlns:tools="http://schemas.android.com/tools">
+    <uses
+        name="service"
+        tools:ignore="InvalidUsesTagAttribute" />
+    <uses
+        name="projection"
+        tools:ignore="InvalidUsesTagAttribute" />
+</automotiveApp>
